@@ -30,7 +30,6 @@ public class HTHSMain extends Application {
 	public void start(Stage stage) {
 		
 		HTHSMain.primaryStage = stage;
-		HTHSMain.primaryStage.setTitle("Testtitel");
 		
 		HTHSMain.primaryStage.initStyle(StageStyle.UNDECORATED);
 		

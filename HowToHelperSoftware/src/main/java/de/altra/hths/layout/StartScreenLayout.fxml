@@ -1,36 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: beige;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.altra.hths.controller.HTHSStartScreenController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-image: url('de/altra/hths/layout/startscreen2.jpg');" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.altra.hths.controller.HTHSStartScreenController">
    <children>
-      <Text layoutX="89.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name of the Software">
+      <Text layoutX="108.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name of the Software">
          <effect>
-            <DropShadow />
+            <DropShadow>
+               <input>
+                  <Reflection />
+               </input></DropShadow>
          </effect>
          <font>
-            <Font name="Serif Regular" size="48.0" />
+            <Font name="Serif Regular" size="64.0" />
          </font>
       </Text>
-      <Text layoutX="125.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
+      <Text layoutX="235.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
          <effect>
-            <DropShadow />
+            <DropShadow>
+               <input>
+                  <Reflection />
+               </input></DropShadow>
          </effect>
          <font>
             <Font name="Serif Regular" size="18.0" />
          </font>
       </Text>
-      <PasswordField fx:id="pwField" layoutX="216.0" layoutY="144.0" onAction="#pwSubmit" promptText="Your password">
+      <PasswordField fx:id="pwField" layoutX="315.0" layoutY="276.0" onAction="#pwSubmit" promptText="Your password">
          <effect>
-            <DropShadow />
+            <DropShadow>
+               <input>
+                  <Reflection />
+               </input>
+            </DropShadow>
          </effect>
       </PasswordField>
-      <Text layoutX="499.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Made by bla bla bla">
+      <Text fill="WHITE" layoutX="14.0" layoutY="583.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Made by bla bla bla">
          <font>
             <Font name="Serif Italic" size="10.0" />
          </font>
@@ -38,29 +51,33 @@
             <DropShadow />
          </effect>
       </Text>
-      <Text layoutX="47.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You have no password?">
+      <Text fill="WHITE" layoutX="41.0" layoutY="462.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You have no password?">
          <font>
             <Font name="Serif Regular" size="14.0" />
          </font>
          <effect>
             <DropShadow />
          </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Text>
-      <Button layoutX="75.0" layoutY="283.0" mnemonicParsing="false" style="-fx-background-color: beige;" text="Click here">
+      <Button layoutX="764.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeStartMenu" style="-fx-background-color: maroon;" text="x" textFill="WHITE">
          <font>
-            <Font name="Serif Bold" size="14.0" />
+            <Font name="Arial Black" size="11.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
          <effect>
             <DropShadow />
          </effect>
-      </Button>
-      <Button layoutX="374.0" layoutY="144.0" mnemonicParsing="false" onAction="#pwSubmit" style="-fx-background-color: beige;" text="Submit">
-         <effect>
-            <DropShadow />
-         </effect>
-         <font>
-            <Font name="Serif Bold" size="12.0" />
-         </font>
       </Button>
    </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+   <effect>
+      <InnerShadow />
+   </effect>
 </AnchorPane>
